@@ -2,6 +2,7 @@ package com.soni;
 
 import com.soni.designPattern.chainOfResponsibility.ATMDispenseChain;
 import com.soni.designPattern.chainOfResponsibility.Currency;
+import com.soni.lambda.Calculator;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -35,8 +36,11 @@ public class Main {
         //getMaxOccurrenceAlphabetChar("8888888hhhhhdhjadjkuhduhjd8908");
 //        System.out.println(recursiveFact(new BigInteger(String.valueOf(38))));
 //        getExchange(new BigDecimal("4.4"));
-        ATMDispenseChain chain = new ATMDispenseChain();
-        chain.c1.dispense(new Currency(70));
+//        ATMDispenseChain chain = new ATMDispenseChain();
+//        chain.c1.dispense(new Currency(70));
 
+//         test functional interface:
+        Calculator c = (i1, i2) -> (i1 > i2) ? i1-i2 : i2-i1;
+        System.out.println(c.subtract(3,7));
     }
 }
